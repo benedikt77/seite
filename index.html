@@ -6,40 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Seite</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/slider.js"></script>
 </head>
 
 <body>
     <div id="wrapper">
-        <div id="topmenue">
-            <ul>
-                <li><a href="products.html" title="zur den Produkten">Produkte</a></li>
-                <li><a class="aktive" href="index.html" title="zurStartseite">Startseite</a></li>
-                <li><a href="contacts.html" title="zur den Kontakten">Kontakt</a></li>
-            </ul>
-        </div>
-        <div id="header">
-            <img src="images/urlaub.jpg" width="1000" height="200" alt="Strandbild">
-        </div>
+        <!-- <a href="auswertung.php?vorname=benedint&nachname=Klus">Link</a> -->
 
-        <div id="content">
-            <div id="left">
-                <ul>
-                    <li><a href="products.html" title="zur den Produkten">Produkte</a></li>
-                    <li><a class="aktive" href="index.html" title="zurStartseite">Startseite</a></li>
-                    <li><a href="contacts.html" title="zur den Kontakten">Kontakt</a></li>
-                </ul>
+        <form action="auswertung.php" method="post">
+            <div class="form-row">
+                <select name="anrede">
+                    <option value="">Anrede</option>
+                    <option value="Frau">Frau</option>
+                    <option value="Herr">Herr</option>
+                </select>
             </div>
-            <div id="right">
-                <h1>Wilkommen auf meiner Urlaubs Seite</h1>
-                <p class="red text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex earum consequuntur cumque rem quasi enim provident sequi porro! Hic neque nostrum, impedit quisquam delectus architecto assumenda iusto dicta sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex earum consequuntur cumque rem quasi enim provident sequi porro! Hic neque nostrum, impedit quisquam delectus architecto assumenda iusto dicta sunt?</p>
-                <p class="blue text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex earum consequuntur cumque rem quasi enim provident sequi porro! Hic neque nostrum, impedit quisquam delectus architecto assumenda iusto dicta sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex earum consequuntur cumque rem quasi enim provident sequi porro! Hic neque nostrum, impedit quisquam delectus architecto assumenda iusto dicta sunt?</p>
-                <p class="green text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex earum consequuntur cumque rem quasi enim provident sequi porro! Hic neque nostrum, impedit quisquam delectus architecto assumenda iusto dicta sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex earum consequuntur cumque rem quasi enim provident sequi porro! Hic neque nostrum, impedit quisquam delectus architecto assumenda iusto dicta sunt?</p>
+            <div class="form-row">
+                <input type="text" name="Vorname" placeholder="Vorname">
             </div>
-
-            <div id="footer" class="text-center">
-                <div id="copyright">copyright &copy; Benedikt 2025</div>
+            <div class="form-row">
+                <input type="text" name="nachname" placeholder="Nachname">
             </div>
-        </div>
+            <div class="form-row">
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-row">
+                <input type="radio" id="gesetzlich" name="versicherung" value="gesetzlich" checked>
+                <label for="gesetzlich">gesetzlich</label>
+                <input type="radio" id="privat" name="versicherung" value="privat">
+                <label for="privat">privat</label>
+            </div>
+            <div class="form-row">
+                <input type="checkbox" id="bahn" name="verbindung[]" value="bahn" checked>
+                <label for="bahn">Bahn</label>
+                <input type="checkbox" id="auto" name="verbindung[]" value="auto">
+                <label for="auto">Auto</label>
+                <input type="checkbox" id="fahrrad" name="verbindung[]" value="fahrrad">
+                <label for="fahrrad">Fahrrad</label>
+            </div>
+            <div class="form-row">
+                <div class="slidecontainer">
+                    <label for="myRange">Preis</label>
+                    <input type="range" name="preis" min="50" max="3000" step="50" value="150" id="myRange">
+                    <span id="pricecontainer"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <textarea type="text" name="nachricht" placeholder="Deine Nachricht:" rows="8" cols="30"></textarea>
+            </div>
+            <div class="form-row">
+                <input type="submit" value="absenden" class="button">
+            </div>
+        </form>
     </div>
 </body>
 

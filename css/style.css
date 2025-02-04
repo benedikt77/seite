@@ -1,129 +1,38 @@
 body {
     margin: 0;
-
 }
 
-/* Wrapper */
 #wrapper {
-    width: 1000px;
-    margin: 0 auto;
-}
-/* Horizontales Menü */
-#topmenue ul {
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: gray;
-    float: left;
-}
-#topmenue ul li {
-    float: left;
-}
-#topmenue ul li a {
-    padding: 5px 10px;
-    display: block;
-    text-decoration: none;
-    color: #333;
-}
-#topmenue ul li a:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-/* vertikales menü */
-#header img{
-    vertical-align: bottom;
-}
-#left {
-    float: left;
-    width: 200px;
-}
-#left ul {
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: gray;
-    float: left;
-}
-#left li ul:last-child{
-    border-bottom: none;
-}
-#left ul li{
-    border-bottom: 1px dotted #999;
-}
-#left ul li a {
-    padding: 5px 10px;
-    display: block;
-    text-decoration: none;
-    color: #333;
-}
-#left ul a:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-/* unter dem Bild rechts */
-#right {
-    float: right;
-    width: 790px;
-
-}
-.red{
-    color: red;
-    float: right;
-}
-.blue{
-    color: blue;
-    float: left;
-}
-.green{
-    color: green;
-    
-}
-.text-right{
-    text-align: right;
-}
-.text-center{
-    text-align: center;
-}
-.text-justify{
-    text-align: justify;
-}
-.text-bold{
-    font-weight: bold;
-}
-
-/* footer  */
-#footer {
-    width: 100%;
-    height: 150px;
-    background-color: #333;
-    clear: both;
+    width: 500px;
+    margin: 50px auto;
+    border: 1px solid #999;
     position: relative;
+    padding: 20px;
 }
 
-#copyright{
-    width: 100%;
-    text-align: center;
+.form-row {
+    margin-bottom: 10px;
+}
+
+.button {
+    background-color: #005CC8;
+    border: none;
+    padding: 10px;
     color: white;
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-}
-table{
-    width: 100%;
-    border-collapse: collapse;
-}
-th{
-    text-align: left;
-}
-tr:nth-child(odd){
-    background-color: #e5e5e5;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.aktive{
-    background-color: #333!important;
-    color: white!important;
+.button:hover {
+    background-color: #024ca8;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#pricecontainer {
+    display: inline-block;
+    background-color: bisque;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
 }
